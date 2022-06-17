@@ -41,12 +41,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let st = UIStoryboard(name: "Main", bundle: nil)
+        let st = UIStoryboard(name: "Main", bundle: nil) //
         let secondPageVC = st.instantiateViewController(withIdentifier: "SecondPageViewController") as! SecondPageViewController
         secondPageVC.secondPageImageView = arrayImage[indexPath.row]
         secondPageVC.secondPageTextOutlet = arrayText[indexPath.row]
         secondPageVC.modalPresentationStyle = .fullScreen
-        self.present(secondPageVC, animated: true)
+        self.present(secondPageVC, animated: true) //
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
